@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,15 +7,18 @@
 <body>
   <h1 id="colorBlock">COLORRRRRRRR</h1>
   <form>
-    <input id="red" type="range" min="0" max="255">Red
-    <input id="green" type="range" min="0" max="255">Green
-    <input id="blue" type="range" min="0" max="255">Blue
+    <input id="red" type="range" min="0" max="255" oninput="changeColor()">Red
+    <input id="green" type="range" min="0" max="255" oninput="changeColor()">Green
+    <input id="blue" type="range" min="0" max="255" oninput="changeColor()">Blue
   </form>
   <script>
-    var redInput = document.getElementById("red");
-    var greenInput = document.getElementById("green");
-    var blueInput = document.getElementById("blue");
-    document.getElementById("colorBlock").style.color = (redInput, greenInput, blueInput);
+    function changeColor() {
+      var redInput = document.getElementById("red").value;
+      var greenInput = document.getElementById("green").value;
+      var blueInput = document.getElementById("blue").value;
+      document.getElementById("colorBlock").style.background = `rgb(${redInput}, ${greenInput}, ${blueInput})`;
+    }
+    
   </script>
 </body>
 </html>
