@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>測試</title>
+</head>
+<body>
+  <h1 id="colorBlock">COLORRRRRRRR</h1>
+  <form>
+    <input id="red" type="range" min="0" max="255">Red
+    <input id="green" type="range" min="0" max="255">Green
+    <input id="blue" type="range" min="0" max="255">Blue
+  </form>
+  <script>
+    var redInput = document.getElementById("red");
+    var greenInput = document.getElementById("green");
+    var blueInput = document.getElementById("blue");
+    document.getElementById("colorBlock").style.color = (redInput, greenInput, blueInput);
+  </script>
+</body>
+</html>
